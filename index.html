@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PITIK NI JONES</title>
+    
+    <!-- 1. External Fonts & Icons (Fixed Links) -->
+    <link rel="preconnect" href="https://googleapis.com">
+    <link rel="preconnect" href="https://gstatic.com" crossorigin>
+    <link href="https://googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cloudflare.com">
+    
+    <!-- 2. Local Stylesheet (May cache-buster para pilitin ang browser mag-update) -->
+    <link rel="stylesheet" href="style.css?v=2"/>
+</head>
+<body>
+
+    <!-- NAVIGATION BAR -->
+    <nav>
+        <div class="brand-container">
+            <!-- Pwede mo lagyan ng logo o brand name dito sa hinaharap -->
+        </div>
+        <div class="link-container">
+            <a class="link" href="#home">Home</a>
+            
+            <!-- Gallery with Dropdown Structure -->
+            <div class="dropdown">
+                <a class="link dropdown-btn" href="#gallery">Gallery <i class="fas fa-caret-down"></i></a>
+                <div class="dropdown-content">
+                    <a href="#gallery" class="filter-link" data-target="wedding">Weddings</a>
+                    <a href="#gallery" class="filter-link" data-target="birthday">Birthdays</a>
+                </div>
+            </div>
+            
+            <a class="link" href="#testimonial">Feedback</a>
+            <a class="link" href="javascript:void(0)" id="contact-trigger">Contact</a>
+        </div>
+    </nav>
+
+    <!-- HERO / HOME SECTION -->
+    <section id="home" class="hero">
+        <div class="overlay"></div>
+        <div class="hero-content">
+            <h4 class="brand">Welcome to</h4>
+            <h1>PITIK NI JONES</h1>
+            <p>PITIK NI JONES is a professional photography service dedicated to capturing high-quality, timeless, and meaningful images.</p>
+            <a href="#gallery" class="btn">Explore Now</a>
+        </div>
+    </section>
+
+    <!-- PHOTO GALLERY SECTION -->
+    <section id="gallery" class="gallery">
+        <h2>Photo Gallery</h2>
+        
+        <!-- Filter Buttons -->
+        <div class="filter-buttons">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="wedding">Weddings</button>
+            <button class="filter-btn" data-filter="birthday">Birthdays</button>
+        </div>
+
+        <!-- Carousel Slider Wrapper Container -->
+        <div class="slider-wrapper">
+            <!-- Navigation Arrows (< at >) -->
+            <button class="slide-arrow id-prev" id="slide-arrow-prev">&#8249;</button>
+            <button class="slide-arrow id-next" id="slide-arrow-next">&#8250;</button>
+            
+            <!-- Images Row container -->
+            <div class="gallery-container" id="slider-container">
+                <img src="sample1.jpg" class="gallery-item wedding" loading="lazy" alt="Wedding 1">
+                <img src="sample2.jpg" class="gallery-item birthday" loading="lazy" alt="Birthday 1">
+                <img src="sample3.jpg" class="gallery-item birthday" loading="lazy" alt="Wedding 2">
+                <img src="sample4.jpg" class="gallery-item birthday" loading="lazy" alt="Birthday 2">
+                <img src="sample5.jpg" class="gallery-item birthday" loading="lazy" alt="Wedding 3">
+                <img src="sample6.jpg" class="gallery-item birthday" loading="lazy" alt="Birthday 3">
+                <img src="sample7.jpg" class="gallery-item birthday" loading="lazy" alt="Wedding 4">
+                <img src="sample8.jpg" class="gallery-item birthday" loading="lazy" alt="Birthday 4">
+                <img src="BIRTHDAY 1.jpg" class="gallery-item birthday" loading="lazy" alt="Birtday 5">
+                <img src="BIRTHDAY 2.jpg" class="gallery-item birthday" loading="lazy" alt="Birthday 6">
+                <img src="BIRTHDAY 3.jpg" class="gallery-item wedding" loading="lazy" alt="Wedding 2">
+                <img src="BIRTHDAY 4.jpg" class="gallery-item birthday" loading="lazy" alt="Birthday 2">
+                <img src="WEDDING 1.jpg" class="gallery-item wedding" loading="lazy" alt="Wedding 3">
+                <img src="WEDDING2.jpg" class="gallery-item wedding" loading="lazy" alt="Birthday 3">
+                <img src="WEDDING3.jpg" class="gallery-item wedding" loading="lazy" alt="Wedding 4">
+                <img src="WEDDING4.jpg" class="gallery-item wedding" loading="lazy" alt="Birthday 4">
+            </div>
+        </div>
+
+        <!-- Lightbox Pop-up Structure -->
+        <div id="gallery-lightbox" class="lightbox">
+            <span class="close-lightbox">&times;</span>
+            <img class="lightbox-content" id="lightbox-img" alt="Zoomed View">
+        </div>
+    </section>
+
+    <!-- TESTIMONIAL / COMMENTS SECTION -->
+    <section id="testimonial">
+        <div class="testimonial-heading">
+            <span>Comments</span>
+            <h1>What Our Clients Say</h1>
+        </div>
+
+        <div class="testimonial-box-container">
+            <!-- User 1 -->
+            <div class="testimonial-box">   
+                <div class="box-top">
+                    <div class="profile">
+                        <div class="profile-img">
+                            <img src="feedback1.jpeg" alt="Patrick"/>
+                        </div>      
+                        <div class="name-user">
+                            <strong>Patrick</strong>
+                            <span>@patrickworld</span>
+                        </div>  
+                    </div>     
+                    <div class="reviews">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+                <div class="client-comment">
+                    <p>I needed professional headshots for my portfolio, and they delivered exactly what I wanted. The lighting and editing were top-notch.</p>
+                </div>
+            </div>
+        
+            <!-- User 2 -->
+            <div class="testimonial-box">   
+                <div class="box-top">
+                    <div class="profile">
+                        <div class="profile-img">
+                            <img src="feedback2.jpg" alt="Squidward"/>
+                        </div>      
+                        <div class="name-user">
+                            <strong>Squid ward</strong>
+                            <span>@Squidward_time</span>
+                        </div>  
+                    </div>     
+                    <div class="reviews">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+                <div class="client-comment">
+                    <p>Ang galing kumuha ng candid shots! Nakuha nila yung totoong emosyon ng debut ng anak ko. Salamat sa pag-capture ng napakagandang memory.</p>
+                </div>
+            </div>
+
+            <!-- User 3 -->
+            <div class="testimonial-box">   
+                <div class="box-top">
+                    <div class="profile">
+                        <div class="profile-img">
+                            <img src="feedback3.jpg" alt="Random User"/>
+                        </div>      
+                        <div class="name-user">
+                            <strong>Random</strong>
+                            <span>@Randomworld</span>
+                        </div>  
+                    </div>     
+                    <div class="reviews">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+                <div class="client-comment">
+                    <p>Sobrang ganda ng kinalabasan ng wedding photos namin! Ang daling kausap ng team at napaka-professional habang nagka-shoot. Highly recommended!</p>
+                </div>
+            </div>
+
+            <!-- User 4 -->
+            <div class="testimonial-box">   
+                <div class="box-top">
+                    <div class="profile">
+                        <div class="profile-img">
+                            <img src="feedback4.jpg" alt="Sandy"/>
+                        </div>      
+                        <div class="name-user">
+                            <strong>Sandy</strong>
+                            <span>@Sandy_world</span>
+                        </div>  
+                    </div>     
+                    <div class="reviews">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+                <div class="client-comment">
+                    <p>Excellent service from start to finish. They know how to make you feel comfortable in front of the camera, especially for someone introverted like me.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT SIDEBAR CONTAINER -->
+    <div id="contact-sidebar" class="sidebar">
+        <span class="close-sidebar">&times;</span>
+        <div class="sidebar-content">
+            <h2>Pitik ni Jones</h2>
+            <p class="sidebar-tagline">Let's capture your moments!</p>
+            <div class="contact-info-box">
+                <div class="contact-item">
+                    <i class="fa-solid fa-phone"></i>
+                    <span>+63 912 345 6789</span>
+                </div>
+                <div class="contact-item">
+                    <i class="fa-solid fa-envelope"></i>
+                    <span>pitiknijones@gmail.com</span>
+                </div>
+                <div class="contact-item">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <span>Bulacan, Philippines</span>
+                </div>
+            </div>
+            <div class="sidebar-socials">
+                <h3>Follow My Work</h3>
+                <div class="social-icons">
+                    <a href="https://facebook.com" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="https://instagram.com" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- LOGIC SCRIPTS RUNNER -->
+    <script>
+        const filterButtons = document.querySelectorAll('.filter-btn');
+        const galleryItems = document.querySelectorAll('.gallery-item');
+        const dropdownLinks = document.querySelectorAll('.filter-link');
+        const sliderContainer = document.getElementById("slider-container");
+        const prevButton = document.getElementById("slide-arrow-prev");
+        const nextButton = document.getElementById("slide-arrow-next");
+
+        // 1. Gallery Grid Filter Code
+        function applyFilter(category) {
+            const activeBtn = document.querySelector(`.filter-btn[data-filter="${category}"]`);
+            if (activeBtn) {
+                document.querySelector('.filter-btn.active').classList.remove('active');
+                activeBtn.classList.add('active');
+            }
+
+            galleryItems.forEach(item => {
+                if (category === 'all' || item.classList.contains(category)) {
+                    item.style.display = 'block';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+            sliderContainer.scrollLeft = 0; // Ibalik sa simula kapag nag-click ng kategorya
+        }
+
+        filterButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                applyFilter(button.getAttribute('data-filter'));
+            });
+        });
+
+        dropdownLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                applyFilter(link.getAttribute('data-target'));
+            });
+        });
+
+        // 2. Carousel Slide Control Buttons
+        nextButton.addEventListener("click", () => {
+            const slideWidth = sliderContainer.clientWidth;
+            sliderContainer.scrollLeft += (slideWidth / 2);
+        });
+
+        prevButton.addEventListener("click", () => {
+            const slideWidth = sliderContainer.clientWidth;
+            sliderContainer.scrollLeft -= (slideWidth / 2);
+        });
+
+        // 3. Lightbox pop-up logic
+        const lightbox = document.getElementById('gallery-lightbox');
+        const lightboxImg = document.getElementById('lightbox-img');
+        const closeBtn = document.querySelector('.close-lightbox');
+
+        galleryItems.forEach(item => {
+            item.addEventListener('click', () => {
+                lightbox.style.display = 'block';
+                lightboxImg.src = item.src;
+            });
+        });
+
+        closeBtn.addEventListener('click', () => {
+            lightbox.style.display = 'none';
+        });
+
+        lightbox.addEventListener('click', (e) => {
+            if(e.target !== lightboxImg && e.target !== closeBtn) {
+                lightbox.style.display = 'none';
+            }
+        });
+
+        // 4. Slide-out Contact Sidebar Logic
+        const sidebar = document.getElementById('contact-sidebar');
+        const contactBtn = document.getElementById('contact-trigger');
+        const closeSidebarBtn = document.querySelector('.close-sidebar');
+
+        contactBtn.addEventListener('click', () => {
+            sidebar.style.width = '400px'; 
+        });
+
+        closeSidebarBtn.addEventListener('click', () => {
+            sidebar.style.width = '0';
+        });
+
+        window.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                sidebar.style.width = '0';
+                lightbox.style.display = 'none';
+            }
+        });
+    </script>
+</body>
+</html>
